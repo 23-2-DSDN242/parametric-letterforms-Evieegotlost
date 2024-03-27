@@ -30,10 +30,11 @@ const letterC = {
   "offsety": 0
 }
 
-const backgroundColor  = "#acf2e7";
+const backgroundColor  = "#e3e1dc";
 
-const darkGreen  = "#26b29d";
-const lightGreen  = "#30dfc4";
+const inkcolor  = "#000000";
+const shadowcolor  = "#858585";
+// const lightGreen  = "#30dfc4";
 const strokeColor  = "#0a2d27";
 
 function setup () {
@@ -43,7 +44,9 @@ function setup () {
 
   // color/stroke setup
   stroke(strokeColor);
-  strokeWeight(4);
+  // strokeWeight(4);
+  noStroke();
+
 
   // with no animation, redrawing the screen is not necessary
   noLoop();
@@ -70,11 +73,39 @@ function drawLetter(posx, posy, letterData) {
   let pos2y = posy + letterData["offsety"];
 
   // draw two circles
-  fill(darkGreen);
-  ellipse(posx, posy, 150, 150);
-  fill(lightGreen);
-  ellipse(pos2x, pos2y, size2, size2);
+  fill(shadowcolor);
+  beginShape();
+  vertex(260, 130);
+  bezierVertex(240, 200, 128, 136, 150, 405);
+  bezierVertex(150, 380, 90, 120, 280, 70);
+endShape(CLOSE)
+beginShape();
+vertex(310, 70);
+bezierVertex(240, 200, 290, 236, 300, 405);
+bezierVertex(310, 380, 300, 120, 310, 70);
+endShape(CLOSE)
+
+  fill(inkcolor);
+  filter(BLUR,4);
+  beginShape();
+  vertex(270, 70);
+  bezierVertex(150, 300, 110, 120, 270, 70);
+  endShape(CLOSE)
+
+
+  beginShape();
+  vertex(340, 280);
+  bezierVertex(250, 200, 390, 250, 70, 280);
+endShape(CLOSE)
+
+pop();
+angleMode(RADIANS)
+  ellipse(155, 230, 20, 40);
+
+push();
 }
+
+
 
 function keyTyped() {
   if (key == '!') {
