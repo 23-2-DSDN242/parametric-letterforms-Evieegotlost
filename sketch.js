@@ -92,17 +92,20 @@ endShape(CLOSE)
   bezierVertex(150, 300, 110, 120, 270, 70);
   endShape(CLOSE)
 
+  beginShape();
+vertex(310, 70);
+bezierVertex(240, 200, 290, 236, 300, 405);
+bezierVertex(310, 380, 300, 120, 310, 70);
+endShape(CLOSE)
 
   beginShape();
   vertex(340, 280);
   bezierVertex(250, 200, 390, 250, 70, 280);
 endShape(CLOSE)
 
-pop();
-angleMode(RADIANS)
-  ellipse(155, 230, 20, 40);
 
-push();
+  ellipse(155, 221, 20, 40);
+
 }
 
 
