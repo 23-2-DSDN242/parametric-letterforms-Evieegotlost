@@ -53,7 +53,15 @@ const letterC = {
   "bulkoffsetx": 400,
   "bulkoffsety": 0,
   "midoffsetx": 390,
-  "midoffsety": 60
+  "midoffsety": 60,
+  "2offsetx": 0,
+  "2offsety": 0,
+  "2tailoffsetx": 0,
+  "2tailoffsety": 0,
+  "2bulkoffsetx": 0,
+  "2bulkoffsety": 0,
+  "2midoffsetx": 0,
+  "2midoffsety": 0
 }
 
 const backgroundColor  = "#e3e1dc";
@@ -93,6 +101,17 @@ function draw () {
 }
 
 function drawLetter(posx, posy, letterData) {
+  // determine parameters for shadow stroke
+
+  let TopSx = 280 + letterData["soffsetx"];
+  let TopSy = 70 + letterData["soffsety"];
+  let BulkSx = 240 + letterData["sbulkoffsetx"];
+  let BulkSy = 200 + letterData["sbulkoffsety"];
+  let MidSx = 290 + letterData["smidoffsetx"];
+  let MidSy = 236 + letterData["smidoffsety"];
+  let TailSx = 300 + letterData["stailoffsetx"];
+  let TailSy = 405 + letterData["stailoffsety"];
+
   // determine parameters for first stroke
 
   let Top1x = 280 + letterData["offsetx"];
@@ -125,7 +144,7 @@ function drawLetter(posx, posy, letterData) {
 endShape(CLOSE)
 
   fill(inkcolor);
-    // filter(BLUR,4);
+    filter(BLUR,4);
 
 //   beginShape();
 // vertex(Top1x, Top1y);
@@ -141,12 +160,12 @@ endShape(CLOSE)
 // bezierVertex(150, 300, 110, 120, 270, 70);
 // endShape(CLOSE)
 
-// push()
-// translate(45, -20)
-// angleMode(RADIANS)
-// rotate(0.2)
-//   ellipse(155, 221, 20, 40);
-//   pop()
+push()
+translate(45, -20)
+angleMode(RADIANS)
+rotate(0.2)
+  ellipse(155, 221, 20, 40);
+  pop()
 
   // draw stroke 1
   beginShape();

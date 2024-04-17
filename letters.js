@@ -25,7 +25,15 @@ const alphabet = {
     "2bulkoffsetx": 0,
     "2bulkoffsety": 0,
     "2midoffsetx": 0,
-    "2midoffsety": 0
+    "2midoffsety": 0,
+    "soffsetx": 0,
+    "soffsety": 0,
+    "stailoffsetx": 0,
+    "stailoffsety": 0,
+    "sbulkoffsetx": 0,
+    "sbulkoffsety": 0,
+    "smidoffsetx": 0,
+    "smidoffsety": 0
   },
   "B": {
     "size": 75,
