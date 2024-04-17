@@ -1,13 +1,23 @@
 const alphabet = {
   "default": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 0
+    "offsetx": 30,
+    "offsety": 50,
+    "tailoffsetx": 10,
+    "tailoffsety": 0,
+    "bulkoffsetx": 0,
+    "bulkoffsety": 0,
+    "midoffsetx": 0,
+    "midoffsety": 0
   },
   "A": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
+    "offsetx": 30,
+    "offsety": 50,
+    "tailoffsetx": 10,
+    "tailoffsety": 0,
+    "bulkoffsetx": 0,
+    "bulkoffsety": 0,
+    "midoffsetx": 0,
+    "midoffsety": 0
   },
   "B": {
     "size": 75,
