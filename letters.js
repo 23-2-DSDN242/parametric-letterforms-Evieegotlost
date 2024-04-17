@@ -10,14 +10,22 @@ const alphabet = {
     "midoffsety": 0
   },
   "A": {
-    "offsetx": 30,
-    "offsety": 50,
-    "tailoffsetx": 10,
+    "offsetx": 0,
+    "offsety": 0,
+    "tailoffsetx": 0,
     "tailoffsety": 0,
     "bulkoffsetx": 0,
     "bulkoffsety": 0,
     "midoffsetx": 0,
-    "midoffsety": 0
+    "midoffsety": 0,
+    "2offsetx": 0,
+    "2offsety": 0,
+    "2tailoffsetx": 0,
+    "2tailoffsety": 0,
+    "2bulkoffsetx": 0,
+    "2bulkoffsety": 0,
+    "2midoffsetx": 0,
+    "2midoffsety": 0
   },
   "B": {
     "size": 75,

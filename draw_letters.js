@@ -40,19 +40,25 @@ function drawLetter(letterData) {
 
   // determine parameters for first stroke
 
-  let Top1x = 80 + letterData["offsetx"];
-  let Top1y = 70 + letterData["offsety"];
-  let Bulk1x = 40 + letterData["bulkoffsetx"];
-  let Bulk1y = 20 + letterData["bulkoffsety"];
+  let Top1x = 90 + letterData["offsetx"];
+  let Top1y = 30 + letterData["offsety"];
+  let Bulk1x = 60 + letterData["bulkoffsetx"];
+  let Bulk1y = 90 + letterData["bulkoffsety"];
   let Mid1x = 90 + letterData["midoffsetx"];
-  let Mid1y = 36 + letterData["midoffsety"];
-  let Tail1x = 30 + letterData["tailoffsetx"];
-  let Tail1y = 40 + letterData["tailoffsety"];
+  let Mid1y = 70 + letterData["midoffsety"];
+  let Tail1x = 90 + letterData["tailoffsetx"];
+  let Tail1y = 185 + letterData["tailoffsety"];
   
   // determine parameters for second stroke
 
-  let pos2x = posx + letterData["offsetx"];
-  let pos2y = posy + letterData["offsety"];
+  let Top2x = 110 + letterData["2offsetx"];
+  let Top2y = 100 + letterData["2offsety"];
+  let Bulk2x = 60 + letterData["2bulkoffsetx"];
+  let Bulk2y = 70 + letterData["2bulkoffsety"];
+  let Mid2x = 110 + letterData["2midoffsetx"];
+  let Mid2y = 95 + letterData["2midoffsety"];
+  let Tail2x = 0 + letterData["2tailoffsetx"];
+  let Tail2y = 100 + letterData["2tailoffsety"];
 
 // draw curved stroke
 
@@ -64,26 +70,28 @@ function drawLetter(letterData) {
 endShape(CLOSE)
 
   fill(inkcolor);
-  beginShape();
-vertex(Top1x, Top1y);
-bezierVertex(Bulk1x, Bulk1y, Mid1x, Mid1y, Tail1x, Tail1y);
-endShape(CLOSE)
-beginShape();
-vertex(pos2x = 340, pos2y = 280);
-bezierVertex(pos2x = 250, pos2y = 200, pos2x = 390, pos2y = 250, pos2x = 70, pos2y = 280);
-endShape(CLOSE)
-beginShape();
-vertex(270, 70);
-bezierVertex(150, 300, 110, 120, 270, 70);
-endShape(CLOSE)
-push()
-translate(45, -20)
-angleMode(RADIANS)
-rotate(0.2)
-  ellipse(155, 221, 20, 40);
-  pop()
-  filter(BLUR,4);
+    // filter(BLUR,4);
 
+//   beginShape();
+// vertex(Top1x, Top1y);
+// bezierVertex(Bulk1x, Bulk1y, Mid1x, Mid1y, Tail1x, Tail1y);
+// endShape(CLOSE)
+
+// beginShape();
+// vertex(Top2x, Top2y);
+// bezierVertex(pos2x = 250, pos2y = 200, pos2x = 390, pos2y = 250, pos2x = 70, pos2y = 280);
+// endShape(CLOSE)
+// beginShape();
+// vertex(270, 70);
+// bezierVertex(150, 300, 110, 120, 270, 70);
+// endShape(CLOSE)
+
+// push()
+// translate(45, -20)
+// angleMode(RADIANS)
+// rotate(0.2)
+//   ellipse(155, 221, 20, 40);
+//   pop()
 
   // draw stroke 1
   beginShape();
@@ -93,8 +101,8 @@ endShape(CLOSE)
 
 // draw stroke 2
   beginShape();
-  vertex(pos2x = 340, pos2y = 280);
-  bezierVertex(pos2x = 250, pos2y = 200, pos2x = 390, pos2y = 250, pos2x = 70, pos2y = 280);
+  vertex(Top2x, Top2y);
+  bezierVertex(Bulk2x, Bulk2y, Mid2x, Mid2y, Tail2x, Tail2y);
 endShape(CLOSE)
 
 // draw stroke 3
@@ -111,6 +119,7 @@ rotate(0.2)
   ellipse(155, 221, 20, 40);
   pop()
 }
+
 
 function interpolate_letter(percent, oldObj, newObj) {
   let new_letter = {};
