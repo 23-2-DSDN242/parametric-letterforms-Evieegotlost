@@ -33,7 +33,9 @@ const alphabet = {
     "sbulkoffsetx": 0,
     "sbulkoffsety": 0,
     "smidoffsetx": 0,
-    "smidoffsety": 0
+    "smidoffsety": 0,
+    "spointoffsetx": 0,
+    "spointoffsety": 0
   },
   "B": {
     "size": 75,
