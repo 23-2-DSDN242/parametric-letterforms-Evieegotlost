@@ -40,14 +40,14 @@ function drawLetter(letterData) {
 
   // determine parameters for first stroke
 
-  let Top1x = 280 + letterData["offsetx"];
+  let Top1x = 80 + letterData["offsetx"];
   let Top1y = 70 + letterData["offsety"];
-  let Bulk1x = 240 + letterData["bulkoffsetx"];
-  let Bulk1y = 200 + letterData["bulkoffsety"];
-  let Mid1x = 290 + letterData["midoffsetx"];
-  let Mid1y = 236 + letterData["midoffsety"];
-  let Tail1x = 300 + letterData["tailoffsetx"];
-  let Tail1y = 405 + letterData["tailoffsety"];
+  let Bulk1x = 40 + letterData["bulkoffsetx"];
+  let Bulk1y = 20 + letterData["bulkoffsety"];
+  let Mid1x = 90 + letterData["midoffsetx"];
+  let Mid1y = 36 + letterData["midoffsety"];
+  let Tail1x = 30 + letterData["tailoffsetx"];
+  let Tail1y = 40 + letterData["tailoffsety"];
   
   // determine parameters for second stroke
 
