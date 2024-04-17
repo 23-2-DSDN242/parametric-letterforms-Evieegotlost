@@ -39,14 +39,16 @@ function drawLetter(letterData) {
 
   // determine parameters for shadow stroke
 
-  let TopSx = 80 + letterData["soffsetx"];
+  let TopSx = 0 + letterData["soffsetx"];
   let TopSy = 70 + letterData["soffsety"];
   let BulkSx = 60 + letterData["sbulkoffsetx"];
   let BulkSy = 20 + letterData["sbulkoffsety"];
-  let MidSx = 90 + letterData["smidoffsetx"];
-  let MidSy = 36 + letterData["smidoffsety"];
+  let MidSx = 0 + letterData["smidoffsetx"];
+  let MidSy = 86 + letterData["smidoffsety"];
   let TailSx = 30 + letterData["stailoffsetx"];
   let TailSy = 185 + letterData["stailoffsety"];
+  let Extrax = 40 + letterData["extrax"];
+  let ExtraY = 70 + letterData["extray"];
 
   // determine parameters for first stroke
 
@@ -76,7 +78,7 @@ function drawLetter(letterData) {
   beginShape();
   vertex(BulkSx, BulkSy);
   bezierVertex(TopSx, TopSy, MidSx, MidSy, TailSx, TailSy);
-  bezierVertex(TailSx, TailSy, MidSx-90, MidSy+54, 20, 70);
+  bezierVertex(Extrax, ExtraY, 20, 74, 40, 70);
 endShape(CLOSE)
 
   fill(inkcolor);
