@@ -36,8 +36,12 @@ const alphabet = {
     "smidoffsety": 0,
     "spointoffsetx": 0,
     "spointoffsety": 0,
-    "extrax": 0,
-    "extraY": 0
+    // "extrax": 0,
+    // "extraY": 0,
+    // "extra2x": 0,
+    // "extra2y": 0,
+    // "extra3x": 0,
+    // "extra3y": 0
   },
   "B": {
     "size": 75,

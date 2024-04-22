@@ -39,16 +39,20 @@ function drawLetter(letterData) {
 
   // determine parameters for shadow stroke
 
-  let TopSx = 0 + letterData["soffsetx"];
-  let TopSy = 70 + letterData["soffsety"];
-  let BulkSx = 60 + letterData["sbulkoffsetx"];
-  let BulkSy = 20 + letterData["sbulkoffsety"];
-  let MidSx = 0 + letterData["smidoffsetx"];
-  let MidSy = 86 + letterData["smidoffsety"];
-  let TailSx = 30 + letterData["stailoffsetx"];
+  let TopSx = 70 + letterData["soffsetx"];
+  let TopSy = 80 + letterData["soffsety"];
+  let BulkSx = 80 + letterData["sbulkoffsetx"];
+  let BulkSy = 30 + letterData["sbulkoffsety"];
+  let MidSx = 30 + letterData["smidoffsetx"];
+  let MidSy = 50 + letterData["smidoffsety"];
+  let TailSx = 20 + letterData["stailoffsetx"];
   let TailSy = 185 + letterData["stailoffsety"];
-  let Extrax = 40 + letterData["extrax"];
-  let ExtraY = 70 + letterData["extray"];
+  // let Extrax = 20 + letterData["extrax"];
+  // let Extray = 50 + letterData["extray"];
+  // let Extra2x = 50 + letterData["extra2x"];
+  // let Extra2y = 40 + letterData["extra2y"];
+  // let Extra3x = 80 + letterData["extra3x"];
+  // let Extra3y = 30 + letterData["extra3y"];
 
   // determine parameters for first stroke
 
@@ -64,13 +68,13 @@ function drawLetter(letterData) {
   // determine parameters for second stroke
 
   let Top2x = 100 + letterData["2offsetx"];
-  let Top2y = 100 + letterData["2offsety"];
+  let Top2y = 110 + letterData["2offsety"];
   let Bulk2x = 60 + letterData["2bulkoffsetx"];
-  let Bulk2y = 70 + letterData["2bulkoffsety"];
+  let Bulk2y = 80 + letterData["2bulkoffsety"];
   let Mid2x = 110 + letterData["2midoffsetx"];
-  let Mid2y = 95 + letterData["2midoffsety"];
+  let Mid2y = 105 + letterData["2midoffsety"];
   let Tail2x = 0 + letterData["2tailoffsetx"];
-  let Tail2y = 100 + letterData["2tailoffsety"];
+  let Tail2y = 110 + letterData["2tailoffsety"];
 
 // draw curved stroke
 
@@ -78,7 +82,7 @@ function drawLetter(letterData) {
   beginShape();
   vertex(BulkSx, BulkSy);
   bezierVertex(TopSx, TopSy, MidSx, MidSy, TailSx, TailSy);
-  bezierVertex(Extrax, ExtraY, 20, 74, 40, 70);
+  bezierVertex(20, 50, 50, 40, 80, 30);
 endShape(CLOSE)
 
   fill(inkcolor);
