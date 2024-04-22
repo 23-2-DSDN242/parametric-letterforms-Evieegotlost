@@ -123,8 +123,8 @@ endShape(CLOSE)
 
 // draw stroke 3
   beginShape();
-  vertex(270, 70);
-  bezierVertex(150, 300, 110, 120, 270, 70);
+  vertex(75, 35);
+  bezierVertex(20, 120, 40, 35, 75, 35);
   endShape(CLOSE)
 
 // draw blot
@@ -132,7 +132,7 @@ push()
 translate(45, -20)
 angleMode(RADIANS)
 rotate(0.2)
-  ellipse(155, 221, 20, 40);
+  ellipse(12, 105, 5, 10);
   pop()
 }
 
