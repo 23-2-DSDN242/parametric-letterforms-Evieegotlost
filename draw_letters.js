@@ -47,12 +47,12 @@ function drawLetter(letterData) {
   let MidSy = 50 + letterData["smidoffsety"];
   let TailSx = 20 + letterData["stailoffsetx"];
   let TailSy = 185 + letterData["stailoffsety"];
-  // let Extrax = 20 + letterData["extrax"];
-  // let Extray = 50 + letterData["extray"];
-  // let Extra2x = 50 + letterData["extra2x"];
-  // let Extra2y = 40 + letterData["extra2y"];
-  // let Extra3x = 80 + letterData["extra3x"];
-  // let Extra3y = 30 + letterData["extra3y"];
+  let Extrax = 20 + letterData["extrax"];
+  let Extray = 50 + letterData["extray"];
+  let Extra2x = 50 + letterData["extra2x"];
+  let Extra2y = 40 + letterData["extra2y"];
+  let Extra3x = 80 + letterData["extra3x"];
+  let Extra3y = 30 + letterData["extra3y"];
 
   // determine parameters for first stroke
 
@@ -76,13 +76,31 @@ function drawLetter(letterData) {
   let Tail2x = 0 + letterData["2tailoffsetx"];
   let Tail2y = 110 + letterData["2tailoffsety"];
 
+  // determine parameters for third stroke
+
+  let Top3x = 20 + letterData["3offsetx"];
+  let Top3y = 120 + letterData["3offsety"];
+  let Bulk3x = 75 + letterData["3bulkoffsetx"];
+  let Bulk3y = 35 + letterData["3bulkoffsety"];
+  let Mid3x = 40 + letterData["3midoffsetx"];
+  let Mid3y = 35 + letterData["3midoffsety"];
+  let Tail3x = 75 + letterData["3tailoffsetx"];
+  let Tail3y = 35 + letterData["3tailoffsety"];
+
+   // determine parameters for blot
+
+   let Blotx = 12 + letterData["blotx"];
+   let Bloty = 105 + letterData["bloty"];
+   let Blotwidth = 5 + letterData["blotwidth"];
+   let Blotheight = 10 + letterData["blotheight"];
+
 // draw curved stroke
 
   fill(shadowcolor);
   beginShape();
   vertex(BulkSx, BulkSy);
   bezierVertex(TopSx, TopSy, MidSx, MidSy, TailSx, TailSy);
-  bezierVertex(20, 50, 50, 40, 80, 30);
+  bezierVertex(Extrax, Extray, Extra2x, Extra2y, Extra3x, Extra3y);
 endShape(CLOSE)
 
   fill(inkcolor);
@@ -123,8 +141,8 @@ endShape(CLOSE)
 
 // draw stroke 3
   beginShape();
-  vertex(75, 35);
-  bezierVertex(20, 120, 40, 35, 75, 35);
+  vertex(Bulk3x, Bulk3y);
+  bezierVertex(Top3x, Top3y, Mid3x, Mid3y, Tail3x, Tail3y);
   endShape(CLOSE)
 
 // draw blot
@@ -132,7 +150,7 @@ push()
 translate(45, -20)
 angleMode(RADIANS)
 rotate(0.2)
-  ellipse(12, 105, 5, 10);
+  ellipse(Blotx, Bloty, Blotwidth, Blotheight);
   pop()
 }
 
