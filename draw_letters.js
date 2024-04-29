@@ -104,7 +104,7 @@ function drawLetter(letterData) {
 endShape(CLOSE)
 
   fill(inkcolor);
-    // filter(BLUR,4);
+    // filter(BLUR,0.5);
 
 //   beginShape();
 // vertex(Top1x, Top1y);
