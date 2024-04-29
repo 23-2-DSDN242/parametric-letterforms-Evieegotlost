@@ -5,9 +5,6 @@
  * ["object_field", minimum_bound, maximum_bound]
  */
 const sliderInfo = [
-  // ["size",       0, 100],
-  // ["offsetx",  -30,  30],
-  // ["offsety", -100, 100]
   ["offsetx", -100, 100],
   ["offsety", -100, 150],
   ["tailoffsetx", -100, 100],
@@ -32,14 +29,14 @@ const sliderInfo = [
   // ["3bulkoffsety", -100, 100],
   // ["3midoffsetx", -100, 100],
   // ["3midoffsety", -100, 100],
-  // ["soffsetx", -100, 100],
-  // ["soffsety", -100, 100],
-  // ["stailoffsetx", -100, 100],
-  // ["stailoffsety", -100, 100],
-  // ["sbulkoffsetx", -100, 100],
-  // ["sbulkoffsety", -100, 100],
-  // ["smidoffsetx", -100, 100],
-  // ["smidoffsety", -100, 100],
+  ["soffsetx", -100, 100],
+  ["soffsety", -100, 100],
+  ["stailoffsetx", -100, 100],
+  ["stailoffsety", -100, 100],
+  ["sbulkoffsetx", -100, 100],
+  ["sbulkoffsety", -100, 100],
+  ["smidoffsetx", -100, 100],
+  ["smidoffsety", -100, 100],
   // ["extrax", -100, 100],
   // ["extray", -100, 100],
   // ["extra2x", -100, 100],
