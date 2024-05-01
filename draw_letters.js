@@ -96,6 +96,7 @@ function drawLetter(letterData) {
 
 // draw curved stroke
 
+ noStroke();
   fill(shadowcolor);
   beginShape();
   vertex(BulkSx, BulkSy);
