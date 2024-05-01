@@ -32,7 +32,7 @@ const sliderInfo = [
   ["soffsetx", -100, 100],
   ["soffsety", -100, 100],
   ["stailoffsetx", -100, 100],
-  ["stailoffsety", -100, 100],
+  ["stailoffsety", -100, 150],
   ["sbulkoffsetx", -100, 100],
   ["sbulkoffsety", -100, 100],
   ["smidoffsetx", -100, 100],
