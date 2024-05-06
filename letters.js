@@ -936,9 +936,30 @@ const alphabet = {
     "smidoffsety": 10,
   },
   "9": {
-    "size": 40,
-    "offsetx": 0,
-    "offsety": 17
+    "offsetx": -68,
+    "offsety": 83,
+    "tailoffsetx": -10,
+    "tailoffsety": -72,
+    "bulkoffsetx": -58,
+    "bulkoffsety": -70,
+    "midoffsetx": -72,
+    "midoffsety": 38,
+    "2offsetx": -16,
+    "2offsety": -42,
+    "2tailoffsetx": 14,
+    "2tailoffsety": -42,
+    "2bulkoffsetx": 24,
+    "2bulkoffsety": -42,
+    "2midoffsetx": -80,
+    "2midoffsety": -92,
+    "soffsetx": 16,
+    "soffsety": 6,
+    "stailoffsetx": -2,
+    "stailoffsety": 3,
+    "sbulkoffsetx": 4,
+    "sbulkoffsety": 38,
+    "smidoffsetx": 60,
+    "smidoffsety": 90,
   }
 
 }
