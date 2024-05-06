@@ -730,8 +730,8 @@ const alphabet = {
   "1": {
     "offsetx": -40,
     "offsety": 20,
-    "tailoffsetx": -40,
-    "tailoffsety": -10,
+    "tailoffsetx": -30,
+    "tailoffsety": -15,
     "bulkoffsetx": -20,
     "bulkoffsety": 130,
     "midoffsetx": -62,
