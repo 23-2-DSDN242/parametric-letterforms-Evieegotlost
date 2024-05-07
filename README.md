@@ -1,6 +1,8 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/xQz3oEP8)
 ## MDDN 242 2024 Assignment 2
 
+![Preview](preview.jpg)
+
 ## Font Name: InkPoint
 ## Name: Evelyn Lee
 
@@ -9,12 +11,14 @@ ________________________________________________________________________________
 
 The initial inspiration for this font was based on Chinese calligraphy for its simple yet messy and bold ink strokes that make up each character.
 
-Mid-way through the project, I realized it would be difficult to replicate the style accurately due to the given parameter limit. Since I was using bezier vertex shapes to create the ink strokes, I would have to use a larger amount of parameters if I wanted to replicate the varying bends. Because of this, I would have to cut down the amount of shapes I'm using as well as any extra vertices.
+
+
+
 
 _____________________________________________________________________________________________________
 #### Progress:  
 
-
+Mid-way through the project, I realized it would be difficult to replicate the style accurately due to the given parameter limit. Since I was using bezier vertex shapes to create the ink strokes, I would have to use a larger amount of parameters if I wanted to replicate the varying bends. Because of this, I would have to cut down the amount of shapes I'm using as well as any extra vertices. This leaves 3 main shapes each with 8 parameters.
 _____________________________________________________________________________________________________
 #### The 24 parameters per letter:
 
