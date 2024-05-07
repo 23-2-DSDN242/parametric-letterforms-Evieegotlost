@@ -5,7 +5,35 @@
 
 Each of my letters is composed with two circles. The size and position of the first circle is fixed, but the location and size of the second circle is controlled by three parameters.
 
-The three parameters per letter:
-  * `size` : radius of the second circle
-  * `offsetx` : x offset of the second circle relative to the first one
-  * `offsety` : y offset of the second circle relative to the first one
+
+The 24 parameters per letter:
+
+Parameters for first bezier vertex shape
+  * `offsetx` : x position of first vertex point
+  * `offsety` : y position of first vertex point
+  * `tailoffsetx`: x position of second vertex point
+  * `tailoffsety`: y position of second vertex point
+  * `bulkoffsetx`: -6,
+  * `bulkoffsety`: 2,
+  * `midoffsetx`: -4,
+  * `midoffsety`: 6,
+
+Parameters for second bezier vertex shape
+  * `2offsetx`: x position of first vertex point
+  * `2offsety`: y position of first vertex point
+  * `2tailoffsetx`: x position of second vertex point
+  * `2tailoffsety`: y position of second vertex point
+  * `2bulkoffsetx`: 2,
+  * `2bulkoffsety`: -4,
+  * `2midoffsetx`: 14,
+  * `2midoffsety`: 2,
+
+Parameters for third/shadow bezier vertex shape
+  * `soffsetx`: -20,
+  * `soffsety`: 2,
+  * `stailoffsetx`: x position of first vertex point
+  * `stailoffsety`: y position of first vertex point
+  * `sbulkoffsetx`: x position of second vertex point
+  * `sbulkoffsety`: y position of second vertex point
+  * `smidoffsetx`: 18,
+  * `smidoffsety`: 10,
