@@ -37,7 +37,7 @@ let curSwapWord = 0;
 
 var defaultSwapWords = [
   "INKPOINT",
-  "1234567?",
+  "12345678",
   "EXPECTED",
   "PROPERTY",
   "ADDITION",
