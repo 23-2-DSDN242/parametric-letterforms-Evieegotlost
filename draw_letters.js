@@ -20,22 +20,6 @@ const strokeColor  = "#0a2d27";
  */
 function drawLetter(letterData) {
 
-    
-  // determine parameters for second circle
-  // let size2 = letterData["size"];
-  // let pos2x = 50  + letterData["offsetx"];
-  // let pos2y = 150 + letterData["offsety"];
-
-  // draw two circles
-  // fill(darkGreen);
-  // ellipse(50, 150, 75, 75);
-  // fill(lightGreen);
-  // ellipse(pos2x, pos2y, size2, size2);
-
-  
-  // color/stroke setup
-  // stroke(strokeColor);
-  // strokeWeight(4);
 
   // determine parameters for shadow stroke
 
@@ -76,26 +60,9 @@ function drawLetter(letterData) {
   let Tail2x = 0 + letterData["2tailoffsetx"];
   let Tail2y = 110 + letterData["2tailoffsety"];
 
-  // determine parameters for third stroke
 
-  let Top3x = 20 + letterData["3offsetx"];
-  let Top3y = 120 + letterData["3offsety"];
-  let Bulk3x = 75 + letterData["3bulkoffsetx"];
-  let Bulk3y = 35 + letterData["3bulkoffsety"];
-  let Mid3x = 40 + letterData["3midoffsetx"];
-  let Mid3y = 35 + letterData["3midoffsety"];
-  let Tail3x = 75 + letterData["3tailoffsetx"];
-  let Tail3y = 35 + letterData["3tailoffsety"];
-
-   // determine parameters for blot
-
-   let Blotx = 12 + letterData["blotx"];
-   let Bloty = 105 + letterData["bloty"];
-   let Blotwidth = 5 + letterData["blotwidth"];
-   let Blotheight = 10 + letterData["blotheight"];
 
 // draw curved stroke
-
  noStroke();
   fill(shadowcolor);
   beginShape();
@@ -105,29 +72,6 @@ function drawLetter(letterData) {
 endShape(CLOSE)
 
   fill(inkcolor);
-    // filter(BLUR,0.5);
-
-//   beginShape();
-// vertex(Top1x, Top1y);
-// bezierVertex(Bulk1x, Bulk1y, Mid1x, Mid1y, Tail1x, Tail1y);
-// endShape(CLOSE)
-
-// beginShape();
-// vertex(Top2x, Top2y);
-// bezierVertex(pos2x = 250, pos2y = 200, pos2x = 390, pos2y = 250, pos2x = 70, pos2y = 280);
-// endShape(CLOSE)
-// beginShape();
-// vertex(270, 70);
-// bezierVertex(150, 300, 110, 120, 270, 70);
-// endShape(CLOSE)
-
-// push()
-// translate(45, -20)
-// angleMode(RADIANS)
-// rotate(0.2)
-//   ellipse(155, 221, 20, 40);
-//   pop()
-
   // draw stroke 1
   beginShape();
 vertex(Top1x, Top1y);
@@ -140,19 +84,6 @@ endShape(CLOSE)
   bezierVertex(Bulk2x, Bulk2y, Mid2x, Mid2y, Tail2x, Tail2y);
 endShape(CLOSE)
 
-// draw stroke 3
-  beginShape();
-  vertex(Bulk3x, Bulk3y);
-  bezierVertex(Top3x, Top3y, Mid3x, Mid3y, Tail3x, Tail3y);
-  endShape(CLOSE)
-
-// draw blot
-push()
-translate(45, -20)
-angleMode(RADIANS)
-rotate(0.2)
-  ellipse(Blotx, Bloty, Blotwidth, Blotheight);
-  pop()
 }
 
 
