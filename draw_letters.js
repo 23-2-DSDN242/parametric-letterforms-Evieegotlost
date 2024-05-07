@@ -158,14 +158,36 @@ rotate(0.2)
 
 function interpolate_letter(percent, oldObj, newObj) {
   let new_letter = {};
-  new_letter["size"]    = map(percent, 0, 100, oldObj["size"], newObj["size"]);
+
   new_letter["offsetx"] = map(percent, 0, 100, oldObj["offsetx"], newObj["offsetx"]);
   new_letter["offsety"] = map(percent, 0, 100, oldObj["offsety"], newObj["offsety"]);
+  new_letter["tailoffsetx"]    = map(percent, 0, 100, oldObj["tailoffsetx"], newObj["tailoffsetx"]);
+  new_letter["tailoffsety"] = map(percent, 0, 100, oldObj["tailoffsety"], newObj["tailoffsety"]);
+  new_letter["bulkoffsetx"] = map(percent, 0, 100, oldObj["bulkoffsetx"], newObj["bulkoffsetx"]);
+  new_letter["bulkoffsety"]    = map(percent, 0, 100, oldObj["bulkoffsety"], newObj["bulkoffsety"]);
+  new_letter["midoffsetx"] = map(percent, 0, 100, oldObj["midoffsetx"], newObj["midoffsetx"]);
+  new_letter["midoffsety"] = map(percent, 0, 100, oldObj["midoffsety"], newObj["midoffsety"]);
+  new_letter["2offsetx"]    = map(percent, 0, 100, oldObj["2offsetx"], newObj["2offsetx"]);
+  new_letter["2offsety"] = map(percent, 0, 100, oldObj["2offsety"], newObj["2offsety"]);
+  new_letter["2tailoffsetx"] = map(percent, 0, 100, oldObj["2tailoffsetx"], newObj["2tailoffsetx"]);
+  new_letter["2tailoffsety"]    = map(percent, 0, 100, oldObj["2tailoffsety"], newObj["2tailoffsety"]);
+  new_letter["2bulkoffsetx"] = map(percent, 0, 100, oldObj["2bulkoffsetx"], newObj["2bulkoffsetx"]);
+  new_letter["2bulkoffsety"] = map(percent, 0, 100, oldObj["2bulkoffsety"], newObj["2bulkoffsety"]);
+  new_letter["2midoffsetx"]    = map(percent, 0, 100, oldObj["2midoffsetx"], newObj["2midoffsetx"]);
+  new_letter["2midoffsety"] = map(percent, 0, 100, oldObj["2midoffsety"], newObj["2midoffsety"]);
+  new_letter["soffsetx"] = map(percent, 0, 100, oldObj["soffsetx"], newObj["soffsetx"]);
+  new_letter["soffsety"]    = map(percent, 0, 100, oldObj["soffsety"], newObj["soffsety"]);
+  new_letter["stailoffsetx"]    = map(percent, 0, 100, oldObj["stailoffsetx"], newObj["stailoffsetx"]);
+  new_letter["stailoffsety"] = map(percent, 0, 100, oldObj["stailoffsety"], newObj["stailoffsety"]);
+  new_letter["sbulkoffsetx"] = map(percent, 0, 100, oldObj["sbulkoffsetx"], newObj["sbulkoffsetx"]);
+  new_letter["sbulkoffsety"]    = map(percent, 0, 100, oldObj["sbulkoffsety"], newObj["sbulkoffsety"]);
+  new_letter["smidoffsetx"] = map(percent, 0, 100, oldObj["smidoffsetx"], newObj["smidoffsetx"]);
+  new_letter["smidoffsety"] = map(percent, 0, 100, oldObj["smidoffsety"], newObj["smidoffsety"]);
   return new_letter;
 }
 
 var swapWords = [
-  "ABBAABBA",
-  "CAB?CAB?",
-  "BAAAAAAA"
+  "INKPOINT",
+  "PAPERCUT",
+  "FOUNTAIN"
 ]
