@@ -1,11 +1,14 @@
 /* these are optional special variables which will change the system */
-var systemBackgroundColor = "#acf2e7";
+var systemBackgroundColor = "#e3e1dc";
 var systemLineColor = "#000090";
 var systemBoxColor = "#C73869";
 
 /* internal constants */
-const darkGreen  = "#26b29d";
-const lightGreen  = "#30dfc4";
+
+
+const inkcolor  = "#000000";
+const shadowcolor  = "#858585";
+// const lightGreen  = "#30dfc4";
 const strokeColor  = "#0a2d27";
 
 /*
@@ -16,32 +19,106 @@ const strokeColor  = "#0a2d27";
  * from (0,0) to (100, 200)
  */
 function drawLetter(letterData) {
-  // color/stroke setup
-  stroke(strokeColor);
-  strokeWeight(4);
 
-  // determine parameters for second circle
-  let size2 = letterData["size"];
-  let pos2x = 50  + letterData["offsetx"];
-  let pos2y = 150 + letterData["offsety"];
 
-  // draw two circles
-  fill(darkGreen);
-  ellipse(50, 150, 75, 75);
-  fill(lightGreen);
-  ellipse(pos2x, pos2y, size2, size2);
+  // determine parameters for shadow stroke
+
+  let TopSx = 70 + letterData["soffsetx"];
+  let TopSy = 80 + letterData["soffsety"];
+  let BulkSx = 80 + letterData["sbulkoffsetx"];
+  let BulkSy = 30 + letterData["sbulkoffsety"];
+  let MidSx = 30 + letterData["smidoffsetx"];
+  let MidSy = 50 + letterData["smidoffsety"];
+  let TailSx = 20 + letterData["stailoffsetx"];
+  let TailSy = 185 + letterData["stailoffsety"];
+  let Extrax = 20 + letterData["extrax"];
+  let Extray = 50 + letterData["extray"];
+  let Extra2x = 50 + letterData["extra2x"];
+  let Extra2y = 40 + letterData["extra2y"];
+  let Extra3x = 80 + letterData["extra3x"];
+  let Extra3y = 30 + letterData["extra3y"];
+
+  // determine parameters for first stroke
+
+  let Top1x = 90 + letterData["offsetx"];
+  let Top1y = 30 + letterData["offsety"];
+  let Bulk1x = 60 + letterData["bulkoffsetx"];
+  let Bulk1y = 90 + letterData["bulkoffsety"];
+  let Mid1x = 90 + letterData["midoffsetx"];
+  let Mid1y = 70 + letterData["midoffsety"];
+  let Tail1x = 90 + letterData["tailoffsetx"];
+  let Tail1y = 185 + letterData["tailoffsety"];
+  
+  // determine parameters for second stroke
+
+  let Top2x = 100 + letterData["2offsetx"];
+  let Top2y = 110 + letterData["2offsety"];
+  let Bulk2x = 60 + letterData["2bulkoffsetx"];
+  let Bulk2y = 80 + letterData["2bulkoffsety"];
+  let Mid2x = 110 + letterData["2midoffsetx"];
+  let Mid2y = 105 + letterData["2midoffsety"];
+  let Tail2x = 0 + letterData["2tailoffsetx"];
+  let Tail2y = 110 + letterData["2tailoffsety"];
+
+
+
+// draw curved stroke
+ noStroke();
+  fill(shadowcolor);
+  beginShape();
+  vertex(BulkSx, BulkSy);
+  bezierVertex(TopSx, TopSy, MidSx, MidSy, TailSx, TailSy);
+  bezierVertex(Extrax, Extray, Extra2x, Extra2y, Extra3x, Extra3y);
+endShape(CLOSE)
+
+  fill(inkcolor);
+  // draw stroke 1
+  beginShape();
+vertex(Top1x, Top1y);
+bezierVertex(Bulk1x, Bulk1y, Mid1x, Mid1y, Tail1x, Tail1y);
+endShape(CLOSE)
+
+// draw stroke 2
+  beginShape();
+  vertex(Top2x, Top2y);
+  bezierVertex(Bulk2x, Bulk2y, Mid2x, Mid2y, Tail2x, Tail2y);
+endShape(CLOSE)
+
 }
+
 
 function interpolate_letter(percent, oldObj, newObj) {
   let new_letter = {};
-  new_letter["size"]    = map(percent, 0, 100, oldObj["size"], newObj["size"]);
+
   new_letter["offsetx"] = map(percent, 0, 100, oldObj["offsetx"], newObj["offsetx"]);
   new_letter["offsety"] = map(percent, 0, 100, oldObj["offsety"], newObj["offsety"]);
+  new_letter["tailoffsetx"]    = map(percent, 0, 100, oldObj["tailoffsetx"], newObj["tailoffsetx"]);
+  new_letter["tailoffsety"] = map(percent, 0, 100, oldObj["tailoffsety"], newObj["tailoffsety"]);
+  new_letter["bulkoffsetx"] = map(percent, 0, 100, oldObj["bulkoffsetx"], newObj["bulkoffsetx"]);
+  new_letter["bulkoffsety"]    = map(percent, 0, 100, oldObj["bulkoffsety"], newObj["bulkoffsety"]);
+  new_letter["midoffsetx"] = map(percent, 0, 100, oldObj["midoffsetx"], newObj["midoffsetx"]);
+  new_letter["midoffsety"] = map(percent, 0, 100, oldObj["midoffsety"], newObj["midoffsety"]);
+  new_letter["2offsetx"]    = map(percent, 0, 100, oldObj["2offsetx"], newObj["2offsetx"]);
+  new_letter["2offsety"] = map(percent, 0, 100, oldObj["2offsety"], newObj["2offsety"]);
+  new_letter["2tailoffsetx"] = map(percent, 0, 100, oldObj["2tailoffsetx"], newObj["2tailoffsetx"]);
+  new_letter["2tailoffsety"]    = map(percent, 0, 100, oldObj["2tailoffsety"], newObj["2tailoffsety"]);
+  new_letter["2bulkoffsetx"] = map(percent, 0, 100, oldObj["2bulkoffsetx"], newObj["2bulkoffsetx"]);
+  new_letter["2bulkoffsety"] = map(percent, 0, 100, oldObj["2bulkoffsety"], newObj["2bulkoffsety"]);
+  new_letter["2midoffsetx"]    = map(percent, 0, 100, oldObj["2midoffsetx"], newObj["2midoffsetx"]);
+  new_letter["2midoffsety"] = map(percent, 0, 100, oldObj["2midoffsety"], newObj["2midoffsety"]);
+  new_letter["soffsetx"] = map(percent, 0, 100, oldObj["soffsetx"], newObj["soffsetx"]);
+  new_letter["soffsety"]    = map(percent, 0, 100, oldObj["soffsety"], newObj["soffsety"]);
+  new_letter["stailoffsetx"]    = map(percent, 0, 100, oldObj["stailoffsetx"], newObj["stailoffsetx"]);
+  new_letter["stailoffsety"] = map(percent, 0, 100, oldObj["stailoffsety"], newObj["stailoffsety"]);
+  new_letter["sbulkoffsetx"] = map(percent, 0, 100, oldObj["sbulkoffsetx"], newObj["sbulkoffsetx"]);
+  new_letter["sbulkoffsety"]    = map(percent, 0, 100, oldObj["sbulkoffsety"], newObj["sbulkoffsety"]);
+  new_letter["smidoffsetx"] = map(percent, 0, 100, oldObj["smidoffsetx"], newObj["smidoffsetx"]);
+  new_letter["smidoffsety"] = map(percent, 0, 100, oldObj["smidoffsety"], newObj["smidoffsety"]);
   return new_letter;
 }
 
 var swapWords = [
-  "ABBAABBA",
-  "CAB?CAB?",
-  "BAAAAAAA"
+  "INKPOINT",
+  "PAPERCUT",
+  "FOUNTAIN"
 ]

@@ -36,8 +36,8 @@ let secondsPerWord = 8;
 let curSwapWord = 0;
 
 var defaultSwapWords = [
-  "ACTUALLY",
-  "1234567?",
+  "INKPOINT",
+  "12345678",
   "EXPECTED",
   "PROPERTY",
   "ADDITION",

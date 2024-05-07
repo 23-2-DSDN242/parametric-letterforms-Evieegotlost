@@ -5,9 +5,49 @@
  * ["object_field", minimum_bound, maximum_bound]
  */
 const sliderInfo = [
-  ["size",       0, 100],
-  ["offsetx",  -30,  30],
-  ["offsety", -100, 100]
+  ["offsetx", -100, 100],
+  ["offsety", -100, 150],
+  ["tailoffsetx", -100, 100],
+  ["tailoffsety", -100, 100],
+  ["bulkoffsetx", -100, 100],
+  ["bulkoffsety", -100, 100],
+  ["midoffsetx", -100, 100],
+  ["midoffsety", -100, 100],
+  ["2offsetx", -100, 100],
+  ["2offsety", -100, 100],
+  ["2tailoffsetx", -100, 100],
+  ["2tailoffsety", -100, 100],
+  ["2bulkoffsetx", -100, 100],
+  ["2bulkoffsety", -100, 100],
+  ["2midoffsetx", -100, 100],
+  ["2midoffsety", -100, 100],
+  // ["3offsetx", -100, 100],
+  // ["3offsety", -100, 100],
+  // ["3tailoffsetx", -100, 100],
+  // ["3tailoffsety", -100, 100],
+  // ["3bulkoffsetx", -100, 100],
+  // ["3bulkoffsety", -100, 100],
+  // ["3midoffsetx", -100, 100],
+  // ["3midoffsety", -100, 100],
+  ["soffsetx", -100, 100],
+  ["soffsety", -100, 100],
+  ["stailoffsetx", -100, 100],
+  ["stailoffsety", -100, 150],
+  ["sbulkoffsetx", -100, 100],
+  ["sbulkoffsety", -100, 100],
+  ["smidoffsetx", -100, 100],
+  ["smidoffsety", -100, 100],
+  // ["extrax", -100, 100],
+  // ["extray", -100, 100],
+  // ["extra2x", -100, 100],
+  // ["extra2y", -100, 100],
+  // ["extra3x", -100, 100],
+  // ["extra3y", -100, 100],
+  // ["blotx", -100, 100],
+  // ["bloty", -100, 100],
+  // ["blotwidth", -100, 100],
+  // ["blotheight", -100, 100]
+  
 ];
 
 // PROBABLY DON'T NEED TO EDIT ANYTHING ELSE. STOP HERE.
